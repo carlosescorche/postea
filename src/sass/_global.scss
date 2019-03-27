@@ -1,0 +1,47 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  &:focus {
+    outline: none;
+  }
+}
+
+#app {
+  display: flex;
+  #content-app {
+    background-color: $light;
+    width: 100%;
+    overflow-x: hidden;
+    #content {
+      flex: 1 0 auto;
+    }
+  }
+}
+
+.feather {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+
+  &.danger{
+    stroke: $red;
+    fill: $red;
+  }
+}
+
+.fullscreen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.display-error{
+  font-size: 4rem;
+}

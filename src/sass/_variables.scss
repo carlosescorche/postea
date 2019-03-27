@@ -1,0 +1,63 @@
+// Body
+$body-bg: #F7F9FA;
+
+// Typography
+$font-family-sans-serif: "Source Sans", sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+$blue: #007BFF;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66D9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+// Themes
+$dark: #343A40;
+$light: #F7F9FA;
+$secondary: rgba($dark,.6) !default;
+
+
+// Grays
+$gray-100: rgba($dark,.1) !default;
+$gray-200: rgba($dark,.2) !default;
+$gray-300: rgba($dark,.3) !default;
+$gray-400: rgba($dark,.4) !default;
+$gray-500: rgba($dark,.5) !default;
+$gray-600: rgba($dark,.6) !default;
+$gray-700: rgba($dark,.7) !default;
+$gray-800: rgba($dark,.8) !default;
+$gray-900: rgba($dark,.9) !default;
+$black: $dark !default;
+
+
+
+// Border
+$border-color:$gray-100;
+
+// Sidebar size
+$topbar-base-height: 4.375rem;
+$sidebar-base-width: 14rem;
+$sidebar-collapsed-width: 6.5rem;
+
+
+// Form
+$input-btn-padding-y:.5rem !default;
+$input-border-radius:3px !default;
+
+//Display
+$display1-size:               2.5rem !default;
+$display2-size:               2rem !default;
+$display3-size:               1.35rem !default;
+$display4-size:               1.25rem !default;
+
+$display1-weight:             400 !default;
+$display2-weight:             400 !default;
+$display3-weight:             400 !default;
+$display4-weight:             400 !default;

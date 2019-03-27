@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="49px" viewBox="0 0 36 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>LOGO</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-30.000000, -6.000000)" fill="#007BFF" fill-rule="nonzero">
+            <g id="LOGO" transform="translate(30.000000, 6.000000)">
+                <path d="M0,39 L0.289296178,38.5902907 L13.9711113,12.3356861 L14,12.0577233 L7.96879471,0.600609749 C7.46351434,-0.359099387 6.04088029,-0.116553712 5.87504258,0.957813379 L0,39 Z" id="Shape"></path>
+                <path d="M18.9716962,21 L24,16.3288181 L18.970323,7.61922498 C18.4927448,6.7947685 17.1596454,6.79241568 16.6872549,7.61922498 L14,12.2679859 L14,12.663952 L18.9716962,21 Z" id="Shape" fill-opacity="0.626188859"></path>
+                <path d="M36,39.754092 L31.3195038,11.9096851 C31.1730489,11.0385177 30.0666729,10.6940266 29.4212282,11.31874 L0,39.79426 L16.295823,48.5831385 C17.3257999,49.1386814 18.5798995,49.1389537 19.6101583,48.5839555 L36,39.754092 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

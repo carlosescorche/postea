@@ -1,0 +1,18 @@
+.table{
+    thead{
+        th{
+            border-top: 0 !important;
+            font-weight: 600;
+        }
+    }
+
+    tr.active{
+        td{
+            background: #f5f6fa;
+        }
+    }
+
+    a{
+        text-decoration: none;
+    }
+}

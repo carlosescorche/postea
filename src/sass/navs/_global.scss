@@ -1,0 +1,37 @@
+.sidebar,
+.topbar {
+  .nav-item {
+    position: relative;
+    
+    &.dropdown {
+      .dropdown-toggle {
+        &::after {
+          display: none;
+        }
+      }
+
+      &.show {
+        .dropdown-toggle::after {
+         display: none;
+        }
+      }
+    }
+    
+    .nav-link {
+      position: relative;
+
+      .badge-counter {
+        position: absolute;
+        transform: scale(0.7);
+        transform-origin: top right;
+        right: .25rem;
+        margin-top: -.25rem;
+      }
+      
+      .img-profile {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+  }
+}

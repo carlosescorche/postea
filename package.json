@@ -1,0 +1,36 @@
+{
+  "name": "postea",
+  "version": "1.0.0",
+  "description": "Dashboard desarrollado con bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "keywords": [
+    "Bootstrap",
+    "Html.",
+    "Css"
+  ],
+  "author": "Carlos Escorche",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "4.3.1",
+    "chart.js": "2.8.0",
+    "feather-icons": "4.19.0",
+    "jquery": "3.3.1",
+    "laravel-mix": "4.0.15",
+    "popper.js": "1.14.7"
+  },
+  "devDependencies": {
+    "cross-env": "5.2.0",
+    "resolve-url-loader": "2.3.1",
+    "sass": "1.17.3",
+    "sass-loader": "7.1.0",
+    "vue-template-compiler": "2.6.9"
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Postea Dashboard</title>
+    <link rel="stylesheet" href="dist/app.css">
+</head>
+
+<body>
+
+    <!-- App -->
+    <main id="app" class="fullscreen">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-5 col-lg-6 col-md-7">
+                    <div class="text-center">
+                        <h1 class="display-2">Crear Cuenta</h1>
+                        <p>Regístrate para entrar al dashboard</p>
+                        <button class="btn btn-lg btn-block btn-primary"> <img alt="Google" src="dist/svg/logo-google.svg" class="rounded align-top mr-2">Continuar con google</button>
+                        <hr>
+                        <form>
+                            <div class="form-group">
+                                <input class="form-control" type="email" placeholder="Correo Electrónico" name="email">
+                            </div>
+                            
+                            <div class="form-group">
+                                <input class="form-control" type="password" placeholder="Contraseña" name="password">
+                                <div class="text-left">
+                                    <small>Tu contraseña debe tener al menos 8 caracteres</small>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-lg btn-block btn-primary mb-3" role="button" type="submit">
+                                Crear Cuenta
+                            </button>
+
+                            <p>Tienes cuenta? <a href="login.html">Inicia Sesión</a> </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- ./Main App-->
+
+    <script src="dist/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Postea Dashboard</title>
+    <link rel="stylesheet" href="dist/app.css">
+</head>
+
+<body>
+
+    <!-- App -->
+    <main id="app">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordion-sidebar">
+        
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center" href="index.html">
+                <img src="dist/svg/logo.svg" alt="logo" />
+                <span class="sidebar-brand-text ml-3 mt-3">Postea</span>
+            </a>
+        
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item mt-4">
+                <a class="nav-link" href="index.html"> <i data-feather="pie-chart" class="icon"></i> Dashboard</a>
+            </li>
+        
+            <!-- Nav Item - Listas -->
+            <li class="nav-item active">
+                <a class="nav-link collapsed" href="index.html" data-toggle="collapse" data-target="#collapseList" aria-expanded="true" aria-controls="collapseList"> <i data-feather="list" class="icon"></i> Listas</a>
+            
+                <div id="collapseList" class="collapse" data-parent="#accordion-sidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="list-filter.html">Lista 1</a>
+                        <a class="collapse-item" href="list.html">Lista 2</a>
+                    </div>
+                </div>
+            </li>
+        
+            <!-- Nav Item - Formulario -->
+            <li class="nav-item">
+                <a class="nav-link" href="form.html"> <i data-feather="box" class="icon"></i> Formulario</a>
+            </li>
+        
+            <!-- Nav Item - Paginas Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages"><i data-feather="file" class="icon"></i> Páginas</a>
+        
+                <div id="collapsePages" class="collapse" data-parent="#accordion-sidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="login.html">Iniciar Sesión</a>
+                        <a class="collapse-item" href="create-account.html">Crear Cuenta</a>
+                        <a class="collapse-item" href="forgot-password.html">Recuperar Contraseña</a>
+                        <a class="collapse-item" href="not-found.html">Página 404</a>
+                    </div>
+                </div>
+            </li>
+        
+            <hr class="sidebar-divider">
+        
+            <div class="sidebar-heading mb-2">Otras Opciones</div>
+        
+            <!-- Nav Item - More -->
+            <li class="nav-item">
+                <a class="nav-link" href="">Más</a>
+            </li>
+        
+            <!-- Sidebar Toggler (Sidebar) -->
+            <button id="btn-toggle" class="rounded-circle border-0">
+                <i class="arrow-left" data-feather="arrow-left"></i>
+                <i class="arrow-right" data-feather="arrow-right"></i>
+            </button>
+        </ul>
+        <!-- ./Sidebar -->
+        
+        <!-- Content app -->
+        <div id="content-app" class="d-flex flex-column">
+        
+            <!-- Main Content -->
+            <div id="content">
+        
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top">
+        
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="btn-toggle-top" class="btn btn-link d-md-none rounded-circle p-0 mr-3">
+                        <i data-feather="menu"></i>
+                    </button>
+        
+                    <!-- Topbar Search -->
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group d-flex align-items-center">
+                            <div class="input-group-append text-primary mr-1"> <i data-feather="search"></i> </div>
+                            <input type="text" class="form-control bg-white border-0" placeholder="Enter para buscar" aria-label="Search" aria-describedby="basic-addon2">
+                        </div>
+                    </form>
+        
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+        
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i data-feather="search"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar" aria-label="Search" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button"><i data-feather="search"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+        
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alerts-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i data-feather="bell"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">9+</span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alerts-dropdown">
+                                <h6 class="dropdown-header">
+                                    Centro de alertas
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="bg-primary p-2 rounded-circle">
+                                            <i data-feather="file" class="text-light"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small">Enero 12, 2019</div>
+                                        <span class="font-weight-bold">Nuevo archivo descargado</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small" href="#">Todas las alertas</a>
+                            </div>
+                        </li>
+        
+                        <!-- Nav Item - Messages -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messages-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i data-feather="message-circle"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messages-dropdown">
+                                <h6 class="dropdown-header">
+                                    Mensaje Nuevos
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">Hola, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div> <div class="small">Emily · 58m</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small" href="#">Todos los mensajes</a>
+                            </div>
+                        </li>
+        
+                        <div class="topbar-divider d-none d-sm-block"></div>
+        
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="user-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline">María Luna</span>
+                                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="user-dropdown">
+                                <a class="dropdown-item" href="#"> Perfil </a>
+                                <a class="dropdown-item" href="#"> Configuración </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"> Salir </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- ./Topbar -->
+
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">  
+                        <div class="col">
+                            <ul class="breadcrumbs list-unstyled">
+                                <li><a href="#">Auditoría</a></li>
+                                <li><a href="#" class="active">Auditoría de Usuarios</a></li>
+                            </ul>
+                        </div> 
+                    </div>
+                    <!-- ./row -->
+                    
+                    <!-- row -->
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row align-items-end">
+                                        <div class="col-lg-4 text-center text-lg-left">
+                                            <h1 class="display-3">Auditoría de Usuarios</h1>
+                                        </div>
+
+                                        <div class="col-lg-8">
+                                            <form class="form-inline aligns-items-center justify-content-center justify-content-lg-end" method="get">
+                                                <div class="form-group mr-2">
+                                                    <input type="date" class="form-control" id="date-1" name="date-1" placeholder="Fecha Inicio">
+                                                </div>
+
+                                                <div class="form-group mr-2">
+                                                    <input type="date" class="form-control" id="date-2" name="date-2" placeholder="Fecha Fín">
+                                                </div>
+                                                
+                                                <button type="submit" class="btn btn-primary"><i data-feather="search" class="mr-2"></i>Buscar</button>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-5">  
+                                        <div class="col">
+                                            <!-- Table Responsive -->
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th width="5%">
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" class="checkbox-input"></input>
+                                                                    <span class="checkbox-span"></span>
+                                                                </div>
+                                                            </th>
+                                                            <th width="40%">Registro</th>
+                                                            <th width="20%">Usuario</th>
+                                                            <th width="20%">Fecha</th>
+                                                            <th width="10%">Módulo</th>
+                                                            <th width="10%">Opciones</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" class="checkbox-input"></input>
+                                                                    <span class="checkbox-span"></span>
+                                                                </div>
+                                                            </td>
+                                                            <td>Inicio de sesión</td>
+                                                            <td>
+                                                                <div class="d-flex flex-row">
+                                                                    <div class="image md mr-2">
+                                                                        <img src="https://source.unsplash.com/uDx79AOZ3jM/60x60" />
+                                                                    </div>
+                                            
+                                                                    Bryan Fernandez
+                                                                </div>
+                                                            </td>
+                                                            <td>Enero 3, 2019</td>
+                                                            <td>Sesión</td>
+                                                            <td>
+                                                                <a href="#" class="mr-2 text-secondary"> <i data-feather="trash-2"></i> </a>
+                                                                <a href="#" class="text-secondary"> <i data-feather="settings"></i> </a>
+                                                            </td>
+                                                        </tr>
+                                            
+                                                        <tr>
+                                                            <td>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" class="checkbox-input"></input>
+                                                                    <span class="checkbox-span"></span>
+                                                                </div>
+                                                            </td>
+                                                            <td>Creo un nuevo artículo</td>
+                                                            <td>
+                                                                <div class="d-flex flex-row">
+                                                                    <div class="image md mr-2">
+                                                                        <img src="https://source.unsplash.com/7YVZYZeITc8/60x60" />
+                                                                    </div>
+                                            
+                                                                    Jose Perez
+                                                                </div>
+                                                            </td>
+                                                            <td>Enero 3, 2019</td>
+                                                            <td>Post</td>
+                                                            <td>
+                                                                <a href="#" class="mr-2 text-secondary"> <i data-feather="trash-2"></i> </a>
+                                                                <a href="#" class="text-secondary"> <i data-feather="settings"></i> </a>
+                                                            </td>
+                                                        </tr>
+                                            
+                                                        <tr>
+                                                            <td>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" class="checkbox-input"></input>
+                                                                    <span class="checkbox-span"></span>
+                                                                </div>
+                                                            </td>
+                                                            <td>Edito el artículo lorem ipsum</td>
+                                                            <td>
+                                                                <div class="d-flex flex-row">
+                                                                    <div class="image md mr-2">
+                                                                        <img src="https://source.unsplash.com/rDEOVtE7vOs/60x60" />
+                                                                    </div>
+                                            
+                                                                    María Díaz
+                                                                </div>
+                                                            </td>
+                                                            <td>Enero 3, 2019</td>
+                                                            <td>Post</td>
+                                                            <td>
+                                                                <a href="#" class="mr-2 text-secondary"> <i data-feather="trash-2"></i> </a>
+                                                                <a href="#" class="text-secondary"> <i data-feather="settings"></i> </a>
+                                                            </td>
+                                                        </tr>
+                                            
+                                                        <tr>
+                                                            <td>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" class="checkbox-input"></input>
+                                                                    <span class="checkbox-span"></span>
+                                                                </div>
+                                                            </td>
+                                                            <td>Agrego la categoría lorem ipsum</td>
+                                                            <td>
+                                                                <div class="d-flex flex-row">
+                                                                    <div class="image md mr-2">
+                                                                        <img src="https://source.unsplash.com/ZG3AlXw9FB0/60x60" />
+                                                                    </div>
+                                            
+                                                                    Camila
+                                                                </div>
+                                                            </td>
+                                                            <td>Enero 3, 2019</td>
+                                                            <td>Categoría</td>
+                                                            <td>
+                                                                <a href="#" class="mr-2 text-secondary"> <i data-feather="trash-2"></i> </a>
+                                                                <a href="#" class="text-secondary"> <i data-feather="settings"></i> </a>
+                                                            </td>
+                                                        </tr>
+                                            
+                                                        <tr>
+                                                            <td>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" class="checkbox-input"></input>
+                                                                    <span class="checkbox-span"></span>
+                                                                </div>
+                                                            </td>
+                                                            <td>Cerro sesión</td>
+                                                            <td>
+                                                                <div class="d-flex flex-row">
+                                                                    <div class="image md mr-2">
+                                                                        <img src="https://source.unsplash.com/uDx79AOZ3jM/60x60" />
+                                                                    </div>
+                                            
+                                                                    Bryan Fernandez
+                                                                </div>
+                                                            </td>
+                                                            <td>Enero 3, 2019</td>
+                                                            <td>Sesión</td>
+                                                            <td>
+                                                                <a href="#" class="mr-2 text-secondary"> <i data-feather="trash-2"></i> </a>
+                                                                <a href="#" class="text-secondary"> <i data-feather="settings"></i> </a>
+                                                            </td>
+                                                        </tr>
+                                            
+                                                        <tr>
+                                                            <td>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" class="checkbox-input"></input>
+                                                                    <span class="checkbox-span"></span>
+                                                                </div>
+                                                            </td>
+                                                            <td>Cerro Sesión</td>
+                                                            <td>
+                                                                <div class="d-flex flex-row">
+                                                                    <div class="image md mr-2">
+                                                                        <img src="https://source.unsplash.com/7YVZYZeITc8/60x60" />
+                                                                    </div>
+                                            
+                                                                    Jose Perez
+                                                                </div>
+                                                            </td>
+                                                            <td>Enero 3, 2019</td>
+                                                            <td>Sesión</td>
+                                                            <td>
+                                                                <a href="#" class="mr-2 text-secondary"> <i data-feather="trash-2"></i> </a>
+                                                                <a href="#" class="text-secondary"> <i data-feather="settings"></i> </a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- ./Table Responsive -->
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <ul class="list-unstyled d-flex">
+                                                <li class="mr-3"><a href="#"><b>Eliminar</b></a></li>
+                                                <li><b>5 registros</b></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6 d-flex justify-content-end">
+                                            <nav aria-label="Page navigation example">
+                                                <ul class="pagination">
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="Previous">
+                                                            <span aria-hidden="true">&laquo;</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="Next">
+                                                            <span aria-hidden="true">&raquo;</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card-body-->
+                        </div>
+                        <!-- card -->
+                    </div>
+                    <!-- ./row -->
+
+                    <footer class="col py-5 px-0 d-flex justify-content-between">
+                        <span>
+                            Desarrollado con <i data-feather="heart" class="mx-2 danger"></i> por <a href="https://carlosescorche.com" target="_blank">Carlos Escorche</a>
+                        </span>
+                        <span class="font-weight-bold display-4" style="opacity:.3">
+                            Postea
+                        </span>
+                    </footer>
+                </div>
+                <!-- ./Container -->
+            </div>
+            <!-- ./Content -->
+        </div>
+        <!-- ./Content app -->
+    </main>
+    <!-- ./Main App-->
+        
+    <script src="dist/app.js"></script>
+</body>
+</html>

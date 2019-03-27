@@ -1,0 +1,98 @@
+@mixin sidebar_toggle {
+  width: $sidebar-collapsed-width !important;
+
+  .sidebar-brand {
+    height: $topbar-base-height;
+    text-decoration: none;
+    justify-content: center !important;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 1rem;
+    z-index: 1;
+
+    .sidebar-brand-text {
+      display: none;
+    }
+  }
+
+  .nav-item {
+    .nav-link {
+        width: $sidebar-collapsed-width;
+        text-align: center;
+        padding: 0.5rem;
+        padding-bottom: 1rem;
+        font-size: .8rem;
+        
+        .icon{
+          display:block;
+          width: 1.7rem;
+          height: 1.7rem;
+          margin: auto;
+          margin-bottom: .5rem;
+        }
+    }
+
+    &.active { 
+      .nav-link {
+        font-weight: 600; 
+      } 
+    }
+  }
+
+  .collapse {
+    position: absolute;
+    left: calc(#{$sidebar-collapsed-width} + #{$grid-gutter-width} / 2);
+    top: 2px;
+    z-index: 1;
+    
+    .collapse-inner {
+      border-radius: $border-radius; 
+      box-shadow: $box-shadow;
+    }
+  }
+
+  .collapsing {
+    display: none; 
+    transition: none;
+  }
+
+  .collapse, .collapsing, .toggled { 
+    .collapse-inner {
+      padding: .5rem 0;
+      min-width: 10rem;
+      font-size: $dropdown-font-size;
+      background: $white;
+      margin: 0;
+      
+      .collapse-header {
+        margin: 0;
+        white-space: nowrap;
+        padding: .5rem;
+        text-transform: uppercase;
+        font-size: 0.65rem;
+        color: $dark;
+      }
+
+      .collapse-item {
+        padding: 0.5rem;
+        margin: 0 0.5rem;
+        display: block;
+        color: $dark;
+        text-decoration: none;
+        border-radius: $border-radius;
+        white-space: nowrap;
+        &:hover { background-color: $light; }
+        &:active { background-color: $light; }
+        &.active { color: $primary; font-weight: 700; }
+      }
+    }
+  }
+
+  .sidebar-heading {
+    text-align: center;
+    padding: 0 1rem;
+    font-weight: 700;
+    font-size: .7rem;
+    text-transform: uppercase;
+  }
+}

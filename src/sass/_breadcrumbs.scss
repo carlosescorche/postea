@@ -1,0 +1,25 @@
+.breadcrumbs{
+    display: flex;
+    margin: 1rem  0 2rem;
+
+    li{
+        margin-right: 1.5rem;
+        position: relative;
+
+        a{
+            color: $secondary;
+            font-weight: 600;
+        }
+
+        &:after{
+            content: "/";
+            position: absolute;
+            top: 0;
+            right: -.8rem;
+        }
+
+        &:last-child:after{
+            display: none;
+        }
+    }
+}
