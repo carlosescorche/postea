@@ -22,12 +22,12 @@
             </a>
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active mt-4">
+            <li class="nav-item mt-4">
                 <a class="nav-link" href="index.html"> <i data-feather="pie-chart" class="icon"></i> Dashboard</a>
             </li>
 
             <!-- Nav Item - Métricas -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="metricas.html"> <i data-feather="bar-chart-2" class="icon"></i> Métricas</a>
             </li>
 
@@ -203,39 +203,80 @@
                     <!-- Row -->
                     <div class="row mb-4">
                         <div class="col-md-4">
-                            <a href="#" class="text-reset text-decoration-none">
-                                <div class="card">
-                                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                        <h5 class="display-4 mb-2">Usuarios</h5>
-                                        <span class="display-3 font-weight-bold mb-2">354</span>
-                                        <span class="text-success font-weight-bold">+5% del último mes</span>
-                                    </div>
-                                </div>
-                            </a>
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <canvas 
+                                    class="chart-doughnut" 
+                                    width="100" 
+                                    height="60" 
+                                    data-dataset='["2000", "5000"]'
+                                    data-labels='["Suscritos","Registrados"]' 
+                                    data-background-color='["#e3342f","#007BFF"]'
+                                    data-border-color='["#e3342f","#007BFF"]'>
+                                ></canvas>
+                                <p class="text-dark mt-3 mb-2">Usuarios</p>
+                                <h6>Suscritos vs Registrados</h6>
+                            </div>
                         </div>
-
                         <div class="col-md-4">
-                            <a href="#" class="text-reset text-decoration-none">
-                                <div class="card">
-                                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                        <h5 class="display-4 mb-2">Visitas</h5>
-                                        <span class="display-3 font-weight-bold mb-2">900</span>
-                                        <span class="text-danger font-weight-bold">-4% del último mes</span>
-                                    </div>
-                                </div>
-                            </a>
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <canvas 
+                                    class="chart-doughnut" 
+                                    width="100" 
+                                    height="60" 
+                                    data-dataset='["1000", "1500"]'
+                                    data-labels='["Nuevo","Recurrente"]' 
+                                    data-background-color='["#e3342f","#007BFF"]'
+                                    data-border-color='["#e3342f","#007BFF"]'>
+                                    >
+                                </canvas>
+                                <p class="text-dark mt-3 mb-2">Tráfico</p>
+                                <h6>Nuevo vs Recurrente</h6>
+                            </div>
                         </div>
-
                         <div class="col-md-4">
-                            <a href="#" class="text-reset text-decoration-none">
-                                <div class="card">
-                                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                        <h5 class="display-4 mb-2">Comentarios</h5>
-                                        <span class="display-3 font-weight-bold mb-2">500</span>
-                                        <span class="text-success font-weight-bold">+10% del último mes</span>
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <canvas 
+                                    class="chart-doughnut" 
+                                    width="100" 
+                                    height="60" 
+                                    data-dataset='["1200", "800"]'
+                                    data-labels='["Directo","Referenciado"]' 
+                                    data-background-color='["#e3342f","#007BFF"]'
+                                    data-border-color='["#e3342f","#007BFF"]'>
+                                    >
+                                </canvas>
+                                <p class="text-dark mt-3 mb-2">Tráfico</p>
+                                <h6>Directo vs Referenciado</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ./Row -->
+
+                    <!-- Row -->
+                    <div class="row mt-5 mb-4">
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between mb-4">
+                                        <h5 class="display-4">Lorem Ipsum</h5>
+                                        <a href="#">Ver métricas</a>
                                     </div>
+                    
+                                    <canvas class="chart-lines" width="100" height="50"></canvas>
                                 </div>
-                            </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between mb-4">
+                                        <h5 class="display-4">Lorem Ipsum</h5>
+                                        <a href="#">Ver métricas</a>
+                                    </div>
+                    
+                                    <canvas class="chart-lines" width="100" height="50"></canvas>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- ./Row -->
@@ -249,7 +290,6 @@
                                         <h5 class="display-4">Usuarios registrados</h5>
                                         <a href="#">Ver métricas</a>
                                     </div>
-                                    
 
                                     <canvas class="chart-bar" width="100" height="30"></canvas>
                                 </div>

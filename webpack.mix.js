@@ -12,6 +12,7 @@ let mix = require('laravel-mix');
 
 mix.js('src/js/app.js', 'dist/').sass('src/sass/app.scss', 'dist/');
 mix.copy('src/svg', 'dist/svg');
+mix.copy('src/img', 'dist/img');
 
 // Full API
 // mix.js(src, output);
